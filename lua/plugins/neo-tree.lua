@@ -6,7 +6,22 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 	},
-	config = function()
+  	config = function()
+
+    require"neo-tree".setup {
+      filesystem = {
+        filtered_items = {
+          visible = true,
+          show_hidden_count = true,
+	        hide_dotfiles = false,
+	        hide_gitignored = false,
+          hide_by_name = {
+	          ".git",
+	        },
+        },
+      }
+    }
+
 		local neotree_open = false
 
 		local function toggle_neotree()
