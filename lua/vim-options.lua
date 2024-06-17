@@ -3,7 +3,6 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
-vim.cmd("set signcolumn=no")
 vim.o.showmode = false
 vim.g.mapleader = " "
 
@@ -17,3 +16,11 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>nh', ':nohlsearch<CR>')
+
+vim.cmd([[
+  augroup TelescopeColors
+    autocmd!
+    autocmd ColorScheme * highlight TelescopePromptBorder guifg=#27a1b9 guibg=#16161e
+    autocmd ColorScheme * highlight TelescopePromptTitle guifg=#27a1b9 guibg=#16161e
+  augroup END
+]])

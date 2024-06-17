@@ -10,14 +10,16 @@ return {
       require("telescope").setup({
         defaults = {
           borderchars = {
-            prompt = { "", "", "", "", "", "", "", "" },
-            results = { "", "", "", "", "", "", "", "" },
-            preview = { "", "", "", "", "", "", "", "" },
-          }
+            prompt = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+            results = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+            preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+          },
+          layout_strategy = "vertical",
+          layout_config = { width = 0.5 },
         },
         pickers = {
           find_files = {
-            hidden = true,
+            hidden = false,
           },
         },
         extensions = {
