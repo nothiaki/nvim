@@ -4,7 +4,10 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
 vim.cmd("set signcolumn=yes")
-vim.cmd("set guicursor=n-v-c-i:block-Cursor")
+vim.cmd("set guicursor=n-v:block-Cursor")
+vim.cmd("set guicursor=i-c:hor100")
+--vim.cmd("set colorcolumn=80")
+--vim.cmd("set fillchars+=eob:~")
 
 vim.o.showmode = false
 vim.g.mapleader = " "
@@ -26,4 +29,11 @@ vim.cmd([[
     autocmd ColorScheme * highlight TelescopePromptBorder guifg=#27a1b9 guibg=#16161e
     autocmd ColorScheme * highlight TelescopePromptTitle guifg=#27a1b9 guibg=#16161e
   augroup END
+]])
+
+vim.cmd([[
+augroup CursorShape
+  autocmd!
+  autocmd VimLeave * set guicursor=a:hor100
+augroup END
 ]])
