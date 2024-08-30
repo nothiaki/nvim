@@ -4,8 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set relativenumber")
 vim.cmd("set signcolumn=yes")
-vim.cmd("set guicursor=n-v:block-Cursor")
-vim.cmd("set guicursor=i-c:hor100")
+vim.cmd("set guicursor=n-v-i-c:block-Cursor")
 --vim.cmd("set colorcolumn=80")
 --vim.cmd("set fillchars+=eob:~")
 
@@ -31,9 +30,3 @@ vim.cmd([[
   augroup END
 ]])
 
-vim.cmd([[
-augroup CursorShape
-  autocmd!
-  autocmd VimLeave * set guicursor=a:hor100
-augroup END
-]])
